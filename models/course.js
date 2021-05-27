@@ -11,6 +11,9 @@ const courseSchema = new Schema(
       type: String,
       required: true,
     },
+    university: {
+      type: String,
+    },
     matrials: [
       {
         type: Schema.Types.ObjectId,

@@ -23,15 +23,12 @@ const Course = require("../models/course");
 //     });
 // };
 
-// const blog_create_get = (req, res) => {
-//   res.render("create", { title: "Create a new blog" });
-// };
+const course_create_get = (req, res) => {
+  res.render("./course/create", { title: "create" });
+};
 
 const course_create_post = (req, res) => {
-  const course = new Course({
-    courseName: "test course",
-    courseDescription: "this is the firstr test course here",
-  });
+  const course = new Course(req.body);
   course
     .save()
     .then((result) => {
@@ -57,7 +54,7 @@ const course_create_post = (req, res) => {
 module.exports = {
   //   blog_index,
   //   blog_details,
-  //   blog_create_get,
+  course_create_get,
   course_create_post,
   //   blog_delete,
 };

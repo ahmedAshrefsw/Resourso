@@ -1,0 +1,30 @@
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+    <%- include("../partials/nav.ejs") %>
+
+    <div class="create-blog content">
+      <form action="/course/create" method="POST">
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" name="courseName" required />
+        <label for="university">Choose course university:</label>
+
+        <select name="university" id="university">
+          <option value="Helwan">helwan</option>
+          <option value="cairo">Cairo</option>
+        </select>
+
+        <label for="courseDescription">Course Description:</label>
+        <textarea
+          id="courseDescription"
+          name="courseDescription"
+          required
+        ></textarea>
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <%- include("../partials/footer.ejs") %>
+  </body>
+</html>

@@ -8,11 +8,31 @@
       <form action="/course/create" method="POST">
         <label for="courseName">Course Name:</label>
         <input type="text" id="courseName" name="courseName" required />
-        <label for="university">Choose course university:</label>
 
+        <label for="university">Choose course university:</label>
         <select name="university" id="university">
           <option value="Helwan">helwan</option>
           <option value="cairo">Cairo</option>
+        </select>
+
+        <label for="year">Choose course year:</label>
+        <select name="year" id="year">
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+
+        <label for="level">Choose course level:</label>
+        <select name="level" id="level">
+          <option value="one">one</option>
+          <option value="two">two</option>
+          <option value="three">three</option>
+          <option value="four">four</option>
+        </select>
+
+        <label for="semester">Choose course semester:</label>
+        <select name="semester" id="semester">
+          <option value="first">first</option>
+          <option value="second">second</option>
         </select>
 
         <label for="courseDescription">Course Description:</label>

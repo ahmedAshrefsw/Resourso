@@ -1,15 +1,15 @@
 const Course = require("../models/course");
 
-// const blog_index = (req, res) => {
-//   Blog.find()
-//     .sort({ createdAt: -1 })
-//     .then((result) => {
-//       res.render("index", { blogs: result, title: "All blogs" });
-//     })
-//     .catch((err) => {
-//       console.log(err);
-//     });
-// };
+const course_index = (req, res) => {
+  Course.find()
+    .sort({ createdAt: -1 })
+    .then((result) => {
+      res.render("./course/index", { courses: result, title: "All courses" });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
 
 // const blog_details = (req, res) => {
 //   const id = req.params.id;
@@ -32,7 +32,7 @@ const course_create_post = (req, res) => {
   course
     .save()
     .then((result) => {
-      //   res.redirect("/blogs");
+      res.redirect("/course");
       res.end();
     })
     .catch((err) => {
@@ -52,7 +52,7 @@ const course_create_post = (req, res) => {
 // };
 
 module.exports = {
-  //   blog_index,
+  course_index,
   //   blog_details,
   course_create_get,
   course_create_post,
